@@ -2,6 +2,10 @@ prk_user:
     resource: "@PRKUserBundle/Resources/config/routing.yml"
     prefix:   /
 
+prk_web:
+         resource: "@PRKWebBundle/Resources/config/routing.yml"
+         prefix:   /
+
 app:
     resource: @AppBundle/Controller/
     type:     annotation

@@ -1,0 +1,4 @@
+services:
+#    prk_web.example:
+#        class: PRK\Bundle\WebBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
