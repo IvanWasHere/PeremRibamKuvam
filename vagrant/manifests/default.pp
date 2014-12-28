@@ -1,4 +1,4 @@
-$host_name = "soft.dev"
+$host_name = "peremribamkuvam.dev"
 $db_name = "PeremRibamKuvam"
 
 group { 'puppet': ensure => present }
