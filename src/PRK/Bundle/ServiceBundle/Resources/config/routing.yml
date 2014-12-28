@@ -1,0 +1,7 @@
+prk_service_service:
+    resource: "@PRKServiceBundle/Resources/config/routing/service.yml"
+    prefix:   /service
+
+prk_service_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: PRKServiceBundle:Default:index }

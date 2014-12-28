@@ -1,3 +1,7 @@
+prk_service:
+    resource: "@PRKServiceBundle/Resources/config/routing.yml"
+    prefix:   /
+
 prk_user:
     resource: "@PRKUserBundle/Resources/config/routing.yml"
     prefix:   /
