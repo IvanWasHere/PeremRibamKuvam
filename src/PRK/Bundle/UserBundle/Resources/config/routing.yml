@@ -1,0 +1,3 @@
+prk_user_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: PRKUserBundle:Default:index }
