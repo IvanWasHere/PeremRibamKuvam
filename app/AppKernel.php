@@ -21,6 +21,7 @@ class AppKernel extends Kernel
             new PRK\Bundle\WebBundle\PRKWebBundle(),
             new PRK\Bundle\UserBundle\PRKUserBundle(),
             new PRK\Bundle\ServiceBundle\PRKServiceBundle(),
+            new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
