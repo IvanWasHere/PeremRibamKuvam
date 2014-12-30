@@ -14,9 +14,9 @@
                         </div>
                         <p>{{ entity.description }}</p>
                         <p>
-                            <a class="ui button" href="#">
-                                Baci pogled
-                            </a>
+                                <a href="{{ path('service_show', { 'id': entity.id }) }}" class="ui button">
+                                    Baci pogled
+                                </a>
                         </p>
                     </div>
                 {% endfor %}
