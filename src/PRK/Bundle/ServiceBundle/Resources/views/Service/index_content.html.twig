@@ -1,0 +1,77 @@
+
+
+
+
+<div class="ui vertical feature segment">
+    <div class="ui centered page grid">
+        <div class="fourteen wide column">
+            <div class="ui three column center aligned stackable divided grid">
+                {% for entity in entities %}
+                    <div class="column">
+                        <div class="ui icon header">
+                            <i class="user icon"></i>
+                            {{ entity.name }}
+                        </div>
+                        <p>{{ entity.description }}</p>
+                        <p>
+                            <a class="ui button" href="#">
+                                Baci pogled
+                            </a>
+                        </p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<h1>Service list</h1>
+
+<table class="records_list">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Location</th>
+        <th>Created</th>
+        <th>Updated</th>
+        <th>Id</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+        <tr>
+            <td><a href="{{ path('service_show', { 'id': entity.id }) }}">{{ entity.user }}</a></td>
+            <td>{{ entity.name }}</td>
+            <td>{{ entity.description }}</td>
+            <td>{{ entity.price }}</td>
+            <td>{{ entity.location }}</td>
+            <td>{% if entity.created %}{{ entity.created|date('Y-m-d H:i:s') }}{% endif %}</td>
+            <td>{% if entity.updated %}{{ entity.updated|date('Y-m-d H:i:s') }}{% endif %}</td>
+            <td>{{ entity.id }}</td>
+            <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('service_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('service_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<ul>
+    <li>
+        <a href="{{ path('service_new') }}">
+            Create a new entry
+        </a>
+    </li>
+</ul>
+
