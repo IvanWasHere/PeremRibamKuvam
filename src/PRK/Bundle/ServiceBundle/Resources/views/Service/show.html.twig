@@ -1,7 +1,35 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>Service</h1>
+
+
+
+
+
+
+    <div class="ui grid">
+
+        <div class="ten wide column centered">
+            <h2>{{ entity.name }}</h2>
+
+            <p>{{ entity.description }}</p>
+
+        </div>
+        <div class="six wide column centered">
+            <span>{{ entity.price }}</span>
+
+            <span>Lokacija: {{ entity.location }}</span>
+
+            <p>Objavljeno: {{ entity.created|date('d-m-Y') }}</p>
+
+        </div>
+    </div>
+
+
+
+
+
+
 
     <table class="record_properties">
         <tbody>
