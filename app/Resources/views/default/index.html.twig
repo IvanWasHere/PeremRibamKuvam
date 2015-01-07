@@ -17,6 +17,9 @@
            color: white;
            font-size: 3em;
        }
+       .add-button{
+           color:white;
+       }
 
    </style>
     <div class="ui inverted masthead segment" id="home-image">
@@ -25,7 +28,60 @@
                 <a href="{{ path('homepage') }}"><h1 id="logo">PEREM RIBAM KUVAM</h1></a>
             </div>
         </div>
+        <div class="ui grid">
+            <div class="ui hidden divider"></div>
+            <div class="ui hidden divider"></div>
+            <div class="ui hidden divider"></div>
+            <div class="ui hidden divider"></div>
+            <div class="ui hidden divider"></div>
+            <div class="ui hidden divider"></div>
+            <div class="ui hidden divider"></div>
+            <div class="ui hidden divider"></div>
+            <div class="ui hidden divider"></div>
+            <div class="ui hidden divider"></div>
+            <div class="ui hidden divider"></div>
+            <div class="ui hidden divider"></div>
+            <div class="ui hidden divider"></div>
+            <div class="ui hidden divider"></div>
+            <div class="ui hidden divider"></div>
+            <div class="ui hidden divider"></div>
+            <div class="four wide column"> </div>
+            <div class="three wide column">
+                <div class="ui fluid fade animated big teal basic inverted button">
+                     <a class="add-button" href="{{ path('service_new') }}">
+                    <div class="visible content">
+                       Dodaj novi oglas
+                    </div>
+                     </a>
+                    <a class="add-button" href="{{ path('service_new') }}">
+                    <div class="hidden content">
+                       <i class="right plus icon teal"></i>
+                    </div>
+                    </a>
+                </div>
+
+            </div>
+            <div class="two wide column"> </div>
+            <div class="three wide column">
+                <a href="#service-holder">
+                <div class="ui fluid vertical animated big orange basic inverted button">
+                    <div class="visible content">Pregledaj oglase</div>
+                    <div class="hidden content">
+                        <i class="down arrow icon"></i>
+                    </div>
+                </div>
+                </a>
+
+            </div>
+        </div>
+
+
+
+
+
+
     </div>
+
 
 
     {{ render(controller('PRKServiceBundle:Service:index')) }}
